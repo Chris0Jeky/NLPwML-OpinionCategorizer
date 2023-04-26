@@ -1,16 +1,8 @@
-# This is a sample Python script.
+from nltk.sentiment import SentimentIntensityAnalyzer
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+sia = SentimentIntensityAnalyzer()
+text = "The movie was absolutely fantastic but the acting bad."
+sentiment_scores = sia.polarity_scores(text)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(sentiment_scores)
+# Output: {'neg': 0.0, 'neu': 0.328, 'pos': 0.672, 'compound': 0.8074}
