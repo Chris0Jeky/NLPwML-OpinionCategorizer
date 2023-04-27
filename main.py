@@ -1,4 +1,13 @@
 from nltk.sentiment import SentimentIntensityAnalyzer
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+adjectives = ["fantastic", "great", "amazing", "beautiful", "horrible", "terrible", "awful", "nice"]
+
+wordcloud = WordCloud(background_color='white', width=800, height=800).generate(" ".join(adjectives))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
 
 sia = SentimentIntensityAnalyzer()
 text = "The movie was absolutely fantastic but the acting bad."
