@@ -4,7 +4,7 @@ from visualization import visualize_adjectives
 
 def main():
     # Replace this with the URL you want to scrape
-    url = "https://www.example.com"
+    url = "https://github.com/Chris0Jeky"
     text = fetch_data(url)
 
     processed_tokens = preprocess_text(text)

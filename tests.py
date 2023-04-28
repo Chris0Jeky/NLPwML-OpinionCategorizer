@@ -6,7 +6,7 @@ from visualization import visualize_adjectives
 
 class TestFunctions(unittest.TestCase):
     def test_fetch_data(self):
-        url = "https://www.example.com"
+        url = "https://github.com/Chris0Jeky"
         text = fetch_data(url)
         self.assertIsInstance(text, str)
 
